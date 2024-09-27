@@ -15,7 +15,7 @@ do
         then
         COMM="[`awk '/Name/{print $2}' /proc/$proc/status`]"
     else
-        COMM=`cat /proc/$proc/cmdline | tr -d '\0' `
+        COMM=`cat /proc/$proc/cmdline | tr -d '\0'`
     fi
 
     User=`awk '/Uid/{print $2}' /proc/$proc/status`
